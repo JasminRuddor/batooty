@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@batooty/core/dist/style.css';
+@import '@batooty/dashboard/dist/style.css';
+@import '@batooty/drag-drop/dist/style.css';
+@import '@batooty/progress-bar/dist/style.css';
