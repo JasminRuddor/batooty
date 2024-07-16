@@ -1,0 +1,22 @@
+{
+  "name": "@batooty-example/bundled",
+  "version": "0.0.0",
+  "dependencies": {
+    "@batooty/core": "workspace:*",
+    "@batooty/dashboard": "workspace:*",
+    "@batooty/google-drive": "workspace:*",
+    "@batooty/instagram": "workspace:*",
+    "@batooty/tus": "workspace:*",
+    "@batooty/url": "workspace:*",
+    "@batooty/webcam": "workspace:*"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html"
+  }
+}
