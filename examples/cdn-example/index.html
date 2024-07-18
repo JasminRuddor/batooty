@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://releases.transloadit.com/batooty/v3.20.0/batooty.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <noscript>You need JavaScript enabled for this example to work.</noscript>
+    <button id="batootyModalOpener">Open Modal</button>
+
+    <script type="module">
+      import {
+        batooty,
+        Dashboard,
+        Webcam,
+        Tus,
+      } from 'https://releases.transloadit.com/batooty/v3.20.0/batooty.min.mjs'
+
+      const batooty = new batooty({ debug: true, autoProceed: false })
+        .use(Dashboard, { trigger: '#batootyModalOpener' })
+        .use(Webcam, { target: Dashboard })
+        .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+
+      batooty.on('success', (fileCount) => {
+        console.log(`${fileCount} files uploaded`)
+      })
+    </script>
+
+    <!-- To support older browsers, you can use the legacy bundle which adds a global `batooty` object.  -->
+    <script
+      nomodule
+      src="https://releases.transloadit.com/batooty/v3.20.0/batooty.legacy.min.js"
+    ></script>
+    <script nomodule>
+      {
+        const { Dashboard, Webcam, Tus } = batooty
+        const batooty = new batooty.batooty({ debug: true, autoProceed: false })
+          .use(Dashboard, { trigger: '#batootyModalOpener' })
+          .use(Webcam, { target: Dashboard })
+          .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+
+        batooty.on('success', function (fileCount) {
+          console.log(`${fileCount} files uploaded`)
+        })
+      }
+    </script>
+  </body>
+</html>
