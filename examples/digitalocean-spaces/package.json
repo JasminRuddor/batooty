@@ -1,0 +1,21 @@
+{
+  "name": "@batooty-example/digitalocean-spaces",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@batooty/aws-s3": "workspace:*",
+    "@batooty/core": "workspace:*",
+    "@batooty/dashboard": "workspace:*",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.16.2",
+    "vite": "^4.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node ./server.cjs"
+  }
+}
