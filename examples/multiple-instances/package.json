@@ -1,0 +1,17 @@
+{
+  "name": "@batooty-example/multiple-instances",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@batooty/core": "workspace:*",
+    "@batooty/dashboard": "workspace:*",
+    "@batooty/golden-retriever": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "vite"
+  }
+}
