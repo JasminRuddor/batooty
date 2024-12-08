@@ -1,0 +1,22 @@
+{
+  "name": "@batooty-example/transloadit-markdown-bin",
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "@batooty/core": "workspace:*",
+    "@batooty/dashboard": "workspace:*",
+    "@batooty/drop-target": "workspace:*",
+    "@batooty/image-editor": "workspace:*",
+    "@batooty/remote-sources": "workspace:*",
+    "@batooty/transloadit": "workspace:*",
+    "@batooty/webcam": "workspace:*",
+    "marked": "^4.0.18"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "vite"
+  }
+}
